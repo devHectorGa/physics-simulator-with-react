@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { lazy, Suspense } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { GlobalStyle } from './global.styles';
+
+import Header from './components/header';
+
+const HomePage = lazy(() => import('./pages/homePage'));
+const ScenePage = lazy(() => import('./pages/scenePage'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Header />
+      <Switch>
+        <Suspense fallback={'Cargando...'}>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/scene" component={ScenePage} />
+        </Suspense>
+      </Switch>
+    </>
   );
 }
 
