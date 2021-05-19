@@ -1,0 +1,2 @@
+(this["webpackJsonpphysics-simulator-with-react"]=this["webpackJsonpphysics-simulator-with-react"]||[]).push([[3],{38:function(t,i,s){"use strict";s.r(i),s.d(i,"default",(function(){return e}));var c=s(1);function e(){return Object(c.jsx)("div",{children:"HomePage"})}}}]);
+//# sourceMappingURL=3.95b358bc.chunk.js.map

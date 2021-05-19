@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.js": "/physics-simulator-with-react/static/js/main.0aeaa3ce.chunk.js",
+    "main.js.map": "/physics-simulator-with-react/static/js/main.0aeaa3ce.chunk.js.map",
+    "runtime-main.js": "/physics-simulator-with-react/static/js/runtime-main.25abd1fc.js",
+    "runtime-main.js.map": "/physics-simulator-with-react/static/js/runtime-main.25abd1fc.js.map",
+    "static/js/2.a36bb32a.chunk.js": "/physics-simulator-with-react/static/js/2.a36bb32a.chunk.js",
+    "static/js/2.a36bb32a.chunk.js.map": "/physics-simulator-with-react/static/js/2.a36bb32a.chunk.js.map",
+    "static/js/3.95b358bc.chunk.js": "/physics-simulator-with-react/static/js/3.95b358bc.chunk.js",
+    "static/js/3.95b358bc.chunk.js.map": "/physics-simulator-with-react/static/js/3.95b358bc.chunk.js.map",
+    "static/js/4.06524223.chunk.js": "/physics-simulator-with-react/static/js/4.06524223.chunk.js",
+    "static/js/4.06524223.chunk.js.map": "/physics-simulator-with-react/static/js/4.06524223.chunk.js.map",
+    "static/js/5.71dd7165.chunk.js": "/physics-simulator-with-react/static/js/5.71dd7165.chunk.js",
+    "static/js/5.71dd7165.chunk.js.map": "/physics-simulator-with-react/static/js/5.71dd7165.chunk.js.map",
+    "static/js/6.3531ca96.chunk.js": "/physics-simulator-with-react/static/js/6.3531ca96.chunk.js",
+    "static/js/6.3531ca96.chunk.js.map": "/physics-simulator-with-react/static/js/6.3531ca96.chunk.js.map",
+    "index.html": "/physics-simulator-with-react/index.html",
+    "static/js/2.a36bb32a.chunk.js.LICENSE.txt": "/physics-simulator-with-react/static/js/2.a36bb32a.chunk.js.LICENSE.txt",
+    "static/js/5.71dd7165.chunk.js.LICENSE.txt": "/physics-simulator-with-react/static/js/5.71dd7165.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.25abd1fc.js",
+    "static/js/2.a36bb32a.chunk.js",
+    "static/js/main.0aeaa3ce.chunk.js"
+  ]
+}
