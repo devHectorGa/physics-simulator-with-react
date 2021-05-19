@@ -14,8 +14,16 @@ function App() {
       <Header />
       <Switch>
         <Suspense fallback={'Cargando...'}>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/scene" component={ScenePage} />
+          <Route
+            exact
+            path={`${process.env.PUBLIC_URL}/`}
+            component={HomePage}
+          />
+          <Route
+            exact
+            path={`${process.env.PUBLIC_URL}/scene`}
+            component={ScenePage}
+          />
         </Suspense>
       </Switch>
     </>
