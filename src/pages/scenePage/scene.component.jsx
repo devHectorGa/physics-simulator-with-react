@@ -6,6 +6,9 @@ function Scene() {
   const refScene = useRef();
   const canvasRef = useRef();
 
+  const width = window.innerWidth;
+  const height = window.innerHeight - 75;
+
   useEffect(() => {
     const Engine = Matter.Engine,
       Render = Matter.Render,
@@ -15,30 +18,32 @@ function Scene() {
       Runner = Matter.Runner,
       MouseConstraint = Matter.MouseConstraint;
 
-    const engine = Engine.create({});
+    const engine = Engine.create();
 
     const render = Render.create({
       element: refScene.current,
       canvas: canvasRef.current,
       engine: engine,
       options: {
-        width: window.innerWidth - 15,
-        height: window.innerHeight - 90,
+        width: width,
+        height: height,
         wireframes: false,
+        showAngleIndicator: true,
+        showCollisions: true,
+        showVelocity: true,
       },
     });
 
-    const ballA = Bodies.circle(
-      window.innerWidth - 50 / 2,
-      window.innerHeight - 50 / 2,
-      30,
-      { restitution: 0.5 }
-    );
+    const ballA = Bodies.circle(width / 2, 10, 30, {
+      restitution: 0.5,
+    });
     const ballB = Bodies.circle(10, 20, 30, { restitution: 0.5 });
 
     World.add(engine.world, [
-      Bodies.rectangle(10, 50, 100, 50, { isStatic: true }),
-      Bodies.rectangle(50, 70, 100, 50, { isStatic: true }),
+      Bodies.rectangle(width / 2 + 1, height - 26, width, 50, {
+        isStatic: true,
+      }),
+      Bodies.rectangle(width - 101, height / 2, 200, 20, { isStatic: true }),
     ]);
 
     World.add(engine.world, [ballA, ballB]);
