@@ -2,8 +2,8 @@
   "files": {
     "static/js/0.7bbe3a41.chunk.js": "/physics-simulator-with-react/static/js/0.7bbe3a41.chunk.js",
     "static/js/0.7bbe3a41.chunk.js.map": "/physics-simulator-with-react/static/js/0.7bbe3a41.chunk.js.map",
-    "main.js": "/physics-simulator-with-react/static/js/main.ee19d076.chunk.js",
-    "main.js.map": "/physics-simulator-with-react/static/js/main.ee19d076.chunk.js.map",
+    "main.js": "/physics-simulator-with-react/static/js/main.a01c0900.chunk.js",
+    "main.js.map": "/physics-simulator-with-react/static/js/main.a01c0900.chunk.js.map",
     "runtime-main.js": "/physics-simulator-with-react/static/js/runtime-main.6bea1196.js",
     "runtime-main.js.map": "/physics-simulator-with-react/static/js/runtime-main.6bea1196.js.map",
     "static/js/3.83e4f17d.chunk.js": "/physics-simulator-with-react/static/js/3.83e4f17d.chunk.js",
@@ -23,6 +23,6 @@
   "entrypoints": [
     "static/js/runtime-main.6bea1196.js",
     "static/js/3.83e4f17d.chunk.js",
-    "static/js/main.ee19d076.chunk.js"
+    "static/js/main.a01c0900.chunk.js"
   ]
 }
