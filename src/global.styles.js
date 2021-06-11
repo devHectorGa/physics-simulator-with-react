@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     --gray2: rgba(105,105,105,1);
     --gray3: rgba(153,153,153,1);
     --gray4: rgba(204,204,204,1);
-    --white: rgba(255,255,255, .8);
+    --white: rgba(255,255,255, 1);
     /* FONTS */
     --font-family: 'Roboto', sans-serif;
     --font-size-desktop: calc(1vmin + 1vmax);

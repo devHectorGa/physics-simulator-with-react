@@ -16,13 +16,13 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <Switch>
-        <Suspense fallback={Spinner}>
+      <Suspense fallback={Spinner}>
+        <Switch>
           <Route exact path={HOME} component={HomePage} />
           <Route exact path={CATAPULTA} component={CatapultPage} />
           <Route exact path={ESCENA} component={ScenePage} />
-        </Suspense>
-      </Switch>
+        </Switch>
+      </Suspense>
     </>
   );
 }

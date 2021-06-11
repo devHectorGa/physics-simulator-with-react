@@ -10,13 +10,13 @@ function Catapult() {
   const height = window.innerHeight - 75;
 
   useEffect(() => {
+    const center = { x: 190, y: height - 130 };
+
     const Engine = Matter.Engine,
       Render = Matter.Render,
       Runner = Matter.Runner,
       Composites = Matter.Composites,
       Constraint = Matter.Constraint,
-      MouseConstraint = Matter.MouseConstraint,
-      Mouse = Matter.Mouse,
       Composite = Matter.Composite,
       Bodies = Matter.Bodies,
       Body = Matter.Body,
@@ -35,58 +35,58 @@ function Catapult() {
         showAngleIndicator: true,
         showCollisions: true,
         showVelocity: true,
-        // wireframes: false,
+        background: 'var(--secondary2)',
+        wireframes: process.env.NODE_ENV !== 'production',
       },
     });
 
     Render.run(render);
 
+    const flat = Bodies.rectangle(width / 2, height - 10, width + 2, 40, {
+      isStatic: true,
+      render: { fillStyle: '#060a19' },
+    });
+
+    const horizontalBase = Bodies.rectangle(center.x, center.y + 90, 320, 20, {
+      isStatic: true,
+    });
+
+    const verticalBase = Bodies.rectangle(center.x + 70, center.y, 20, 160, {
+      isStatic: true,
+    });
+
+    const horizontalWithMovement = Bodies.rectangle(
+      center.x + 10,
+      center.y - 70,
+      300,
+      20,
+      { isStatic: true }
+    );
+
+    const verticalWithMovement = Bodies.rectangle(
+      center.x - 130,
+      center.y - 100,
+      20,
+      40,
+      { isStatic: true }
+    );
+
     const runner = Runner.create();
     Runner.run(runner, engine);
 
-    const group = Body.nextGroup(true);
-
-    const stack = Composites.stack(250, 255, 1, 6, 0, 0, (x, y) =>
-      Bodies.rectangle(x, y, 30, 30)
-    );
-
-    const catapult = Bodies.rectangle(400, 520, 320, 20, {
-      collisionFilter: { group },
-    });
-
     Composite.add(world, [
-      stack,
-      catapult,
-      Bodies.rectangle(400, 600, 800, 50.5, {
-        isStatic: true,
-        render: { fillStyle: '#060a19' },
-      }),
-      Bodies.rectangle(250, 555, 20, 50, {
-        isStatic: true,
-        render: { fillStyle: '#060a19' },
-      }),
-      Bodies.rectangle(400, 535, 20, 80, {
-        isStatic: true,
-        collisionFilter: { group },
-        render: { fillStyle: '#060a19' },
-      }),
-      Bodies.rectangle(400, 535, 20, 80, {
-        isStatic: true,
-        collisionFilter: { group },
-        render: { fillStyle: '#060a19' },
-      }),
-      Bodies.circle(560, 100, 50, { density: 0.005 }),
-      Constraint.create({
-        bodyA: catapult,
-        pointB: Vector.clone(catapult.position),
-      }),
+      flat,
+      horizontalBase,
+      verticalBase,
+      horizontalWithMovement,
+      verticalWithMovement,
     ]);
 
     Render.lookAt(render, {
       min: { x: 0, y: 0 },
       max: { x: width, y: height },
     });
-  }, []);
+  }, [width, height]);
 
   return (
     <Container ref={refScene}>

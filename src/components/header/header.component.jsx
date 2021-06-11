@@ -1,5 +1,5 @@
-import { Container, Logo, LogoUN, NavUl, NavLi, Link } from './header.styles';
-import { HOME, ESCENA, CATAPULTA } from '../../helpers/LINKS';
+import { Container, Logo, LogoUN, Link } from './header.styles';
+import { HOME } from '../../helpers/LINKS';
 
 export default function Header() {
   return (
@@ -7,17 +7,7 @@ export default function Header() {
       <Link to={HOME}>
         <Logo src="img/logo.png" />
       </Link>
-      <Link>
-        <LogoUN src="img/logoUnal.png" />
-      </Link>
-      {/* <NavUl>
-        <NavLi>
-          <Link to={CATAPULTA}>Catapulta</Link>
-        </NavLi>
-        <NavLi>
-          <Link to={ESCENA}>Escena</Link>
-        </NavLi>
-      </NavUl> */}
+      <LogoUN src="img/logoUnal.png" />
     </Container>
   );
 }
